@@ -1,0 +1,88 @@
+---
+helpdesk_status:
+  title: Estado de Helpdesk
+  content: >
+    If the status is changed to <span class="doc-desc-opt">Offline</span>, the client interface will be disabled.  Only Admins will be able to access the system.
+helpdesk_url:
+  title: Helpdesk URL
+  content: >
+    Esta dirección URL es la base de su instalación de OsTicket. Es usada en la comunicación de correo electrónico para dirigir de regreso a los usuarios finales  a su helpdesk.
+helpdesk_name_title:
+  title: Nombre/título de Helpdesk
+  content: >
+    Este es el título que aparece en la pestaña del navegador. Si tu página de ayuda del escritorio está marcada, este será el título o el nombre de la página principal.
+default_department:
+  title: Departamento por defecto
+  content: >
+    Elija un  <span class="doc-desc-title"> Departamento</span>por defecto para los Tickets que no se enrutan automáticamente a un departamento. <br/> <br/> El Ticket puede ser enrutado  sobre el tema de ayuda,correo entrante y ajustes de filtro de Ticket.
+default_page_size:
+  title: Tamaño de página predeterminado
+  content: >
+    Elija el número de artículos mostrados por página en las colas de Ticket en el Panel de personal. Cada agente también puede personalizar este número por cuenta propia bajo <span class="doc-desc-title"> My preferences</span>.
+default_log_level:
+  title: Nivel Log predeterminado
+  content: >
+    Determinar el nivel mínimo de problemas que se registrarán en el <span class="doc-desc-title"> registro del sistema</span>. <span class="doc-desc-opt"> depurar</span> representa la menor gravedad y <span class="doc-desc-opt"> Error</span> representa la mayor severidad. Por ejemplo, si quieres ver todos los problemas en los <span class="doc-desc-title"> Registros del sistema</span>, elija <span class="doc-desc-opt"> Debug</span>.
+purge_logs:
+  title: Purgar Logs
+  content: >
+    Determinar cuánto le gustaría mantener <span class="doc-desc-title"> Registros del sistema</span> antes de que se eliminen.
+enable_richtext:
+  title: Activar Texto Enriquecido
+  content: >
+    Si está habilitado, esto permitirá el uso de texto enriquecido de formato entre los clientes y agentes.
+enable_avatars:
+  title: Habilitar Avatares en la Vista de Temas
+  content: >
+    Habilita esto para mostrar<span class="doc-desc-title">Avatares</span> en la correspondencia del hilo. <br><br> El <span class="doc-desc-title">Avatar Source</span> puede ajustarse en la página de configuración de Agentes y Usuarios.
+  links:
+    - 
+      title: Configuración de agentes
+      href: /scp/settings.php?t=agents
+    - 
+      title: Opciones de usuario
+      href: /scp/settings.php?t=users
+collision_avoidance:
+  title: Evitar que a dos agentes se les asignen el mismo Ticket
+  content: >
+    Introduzca la duración máxima que un agente tiene permitido para bloquear un Ticket sin ninguna actividad. <br><br>Introduce <span class="doc-desc-opt"> 0</span> para desactivar la función de bloqueo.
+date_time_options:
+  title: Fecha &amp; opciones de hora
+  content: >
+    Las siguientes configuraciones definen las opciones de Fecha y Hora para el centro de ayuda. Puedes escoger entre la configuración regional por defecto para la zona seleccionada o personalizar el formato para cumplir tus requisitos. Utiliza el formato ICU como referencia. Las fechas mostradas debajo simplemente muestran el resultado de los valores correspondientes.
+  links:
+    - 
+      title: Consulta la tabla de Formatos de Fecha ICU
+      href: http://userguide.icu-project.org/formatparse/datetime
+languages:
+  title: Idiomas del sistema
+  content: >
+    Escoge el idioma principal del sistema y de forma opcional escoge idiomas secundarios para hacer tu interfaz esté adaptada a tus agentes y usuarios finales.
+primary_language:
+  title: Seleccionar Idioma Principal
+  content: >
+    El contenido de este idioma es mostrado a agentes y usuarios finales si su idioma correspondiente no está disponible. Esto incluye el contenido de la interfaz, así como, contenido personalizado como las páginas de agradecimiento y mensajes de correo. <br/><br/> Este es el idioma que debe ser mostrado para contenidos sin traducir.
+secondary_language:
+  title: Idiomas secundarios
+  content: >
+    Selecciona la preferencia de idioma para tus agentes y usuarios finales. La interfaz estará disponible en estos idiomas, y el contenido personalizado como las páginas de agradecimiento y los temas ayuda serán traducibles a estos idiomas.
+attachments:
+  title: Opciones de Adjuntos y Almacenamiento
+  content: >
+    Configura como los adjuntos son almacenados.
+default_storage_bk:
+  title: Almacenamiento de archivos
+  content: >
+    Choose how attachments are stored. <br><br> Additional storage backends can be added by installing storage plugins
+max_file_size:
+  title: Tamaño máximo de archivo
+  content: >
+    Selecciona el tamaño máximo por archivo adjunto que pueden subir los agentes. Esto incluye adjuntos comprimidos, artículos de conocimiento y adjuntos a tickets o respuestas. El límite máximo controlado por PHP es <code>upload_max_filesize</code>.
+  links:
+    - 
+      title: configuraciones del PHP.ini
+      href: "http://php.net/manual/es/ini.core.php#ini.upload-max-filesize"
+files_req_auth:
+  title: Require Login
+  content: >
+    Enable this setting to forbid serving attachments to unauthenticated users. That is, users must sign into the system (both end users and agents), in order to view attachments. <br><br> From a security perspective, be aware that the user's browser may retain previously-viewed files in its cache. Furthermore, all file links on your helpdesk automatically expire after about 24 hours.
